@@ -1,0 +1,96 @@
+@keyframes dropFadeIn {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 8px white;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 2s 1 normal forwards;
+}
+
+.projectNameWrapper {
+  & > span {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 50px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-30px);
+    &:first-child {
+      animation: dropFadeIn 0.5s ease-out 0s 1 normal forwards;
+    }
+    @for $i from 2 through 12 {
+      &:nth-child(#{$i}) {
+        animation: dropFadeIn 0.5s ease-out $i * 100ms 1 normal forwards;
+      }
+    }
+  }
+  & > div > p {
+    font-size: 30px;
+    line-height: 32px;
+    font-weight: 300;
+  }
+}
+
+@keyframes lineLtoR {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.headDivider {
+  overflow: hidden;
+  transform: translateX(-100%);
+  animation: lineLtoR 0.75s ease-in-out 1.75s 1 normal forwards;
+}
+
+.glassContainer {
+  @apply w-min;
+  padding: 1rem;
+  min-height: 200px;
+  background: rgba(10, 10, 10, 0.6);
+  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+$bubbles_total: 30;
+@for $bubble from 1 through $bubbles_total {
+  @keyframes move-#{$bubble}  {
+    #{random(30) + 30}% {
+      transform:
+        translateX(#{random(100) - 100}vw)
+        translateY(#{random(100) - 100}vh)
+    }
+  }
+}
+
+.bubble {
+  background-color: rgba(0, 255, 255, 0.4);
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  @for $bubble from 1 through $bubbles_total {
+    &-#{$bubble} {
+      opacity: (random(20)+10)*0.01;
+      left: #{random(100)}vw;
+      top: #{random(100)}vh;
+      // background-color: rgb(random(255), random(255), random(255));
+      animation: move-#{$bubble} #{30 + $bubble*0.02}s infinite;
+      transform: translate(0, 0) scale((random(100) + 100)*0.01);
+    }
+  }
+}
