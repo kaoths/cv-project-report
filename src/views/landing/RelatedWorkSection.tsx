@@ -18,7 +18,7 @@ export const RelatedWorkSection = () => {
             </li>
           </ul>
         </div>
-        <div className="flex mt-8 divide-x">
+        <div className="flex mt-8">
           <div className="flex-1 px-4">
             <h5 className="text-lg font-medium">
               CariGan{" "}

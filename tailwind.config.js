@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Prompt"],
+      mono: ["Consolas"],
     },
     maxWidth: {
       "1/4": "25%",

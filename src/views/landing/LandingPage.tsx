@@ -2,6 +2,9 @@ import styles from "../../../styles/landing.module.scss";
 import { ProblemStatementSection } from "./ProblemStatementSection";
 import { TechnicalChallengeSection } from "./TechnicalChallengeSection";
 import { RelatedWorkSection } from "./RelatedWorkSection";
+import { TeamMemberSection } from "./TeamMemberSection";
+import { MethodologySection } from "./MethodologySection";
+import { ResultSection } from "./ResultSection";
 
 const arr = Array.from(Array(12).keys());
 const chars = ["C", "O", "N", "F", "I", "D", "E", "N", "T", "I", "A", "L"];
@@ -35,6 +38,9 @@ export const LandingPage = () => {
           <ProblemStatementSection />
           <TechnicalChallengeSection />
           <RelatedWorkSection />
+          <MethodologySection />
+          <ResultSection />
+          <TeamMemberSection />
         </div>
       </div>
     </div>
