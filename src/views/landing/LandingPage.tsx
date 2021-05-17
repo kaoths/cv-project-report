@@ -27,7 +27,7 @@ export const LandingPage = () => {
               <span key={`char_${i}`}>{c}</span>
             ))}
             <div className={`flex justify-center items-end ${styles.fade}`}>
-              <p className="relative">Project</p>
+              <p className="relative">Portrait photo caricature</p>
             </div>
           </div>
         </div>
