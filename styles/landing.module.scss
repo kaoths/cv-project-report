@@ -54,11 +54,10 @@
 }
 
 .glassContainer {
-  @apply w-min;
   padding: 1rem;
   min-height: 200px;
   background: rgba(10, 10, 10, 0.6);
-  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.3);
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
