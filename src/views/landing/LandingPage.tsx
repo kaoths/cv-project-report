@@ -1,6 +1,7 @@
 import styles from "../../../styles/landing.module.scss";
 import { ProblemStatementSection } from "./ProblemStatementSection";
 import { TechnicalChallengeSection } from "./TechnicalChallengeSection";
+import { RelatedWorkSection } from "./RelatedWorkSection";
 
 const arr = Array.from(Array(12).keys());
 const chars = ["C", "O", "N", "F", "I", "D", "E", "N", "T", "I", "A", "L"];
@@ -23,9 +24,7 @@ export const LandingPage = () => {
               <span key={`char_${i}`}>{c}</span>
             ))}
             <div className={`flex justify-center items-end ${styles.fade}`}>
-              <p>Project</p>
-              &nbsp;
-              {/*<span>(2110433 CV@Chula)</span>*/}
+              <p className="relative">Project</p>
             </div>
           </div>
         </div>
@@ -35,6 +34,7 @@ export const LandingPage = () => {
         <div className={`flex flex-col ${styles.fade}`}>
           <ProblemStatementSection />
           <TechnicalChallengeSection />
+          <RelatedWorkSection />
         </div>
       </div>
     </div>

@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export const TechnicalChallengeSection = () => {
   return (
-    <div>
+    <div className="mb-8">
       <div className={styles.glassContainer}>
         <h3 className="text-2xl font-semibold">Technical Challenge</h3>
-        <hr className="my-2" />
+        <hr className="mt-2 my-4" />
         <h5 className="text-lg font-medium">Long processing time</h5>
         <li className="font-light">
           Our model takes seconds to generate the result. Thus, making it
