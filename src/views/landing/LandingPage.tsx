@@ -5,6 +5,7 @@ import { RelatedWorkSection } from "./RelatedWorkSection";
 import { TeamMemberSection } from "./TeamMemberSection";
 import { MethodologySection } from "./MethodologySection";
 import { ResultSection } from "./ResultSection";
+import { OurApplicationSection } from "./OurApplicationSection";
 
 const arr = Array.from(Array(12).keys());
 const chars = ["C", "O", "N", "F", "I", "D", "E", "N", "T", "I", "A", "L"];
@@ -36,6 +37,7 @@ export const LandingPage = () => {
         </div>
         <div className={`flex flex-col ${styles.fade}`}>
           <ProblemStatementSection />
+          <OurApplicationSection />
           <TechnicalChallengeSection />
           <RelatedWorkSection />
           <MethodologySection />
